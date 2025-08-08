@@ -1,0 +1,20 @@
+import pandas as pd
+import seaborn as sns 
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Read in the data with read_csv() into a Pandas Dataframe
+housing_df = pd.read_csv('housing.csv')
+
+# Use .info() to show the features (i.e. columns) in your dataset along with a count and datatype
+#housing_df.info()
+
+print(housing_df.isnull().sum())
+
+# Plot the distribution of the target variable (median_house_value) using a histogram
+
+# bins->amount of columns
+plt.hist(housing_df['median_house_value'], bins=80)
+plt.xlabel("House Values")
+
+plt.show()
